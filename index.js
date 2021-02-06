@@ -1,3 +1,6 @@
+// *******************************************
+// creating array data structure
+// *******************************************
 class Array {
   
   constructor() {
@@ -62,21 +65,29 @@ class Array {
   }
 }
 
-var array1 = new Array();
-array1.push("hello");
-array1.push("nat");
-array1.push("world");
-//console.log(array1);
+var myArray = new Array();
+myArray.push("hello");
+myArray.push("nat");
+myArray.push("world");
 
-//var last = array1.pop();
-//console.log(last);
+myArray.remove(1);
+//console.log(myArray);
 
-//var value = array1.get(0);
-//console.log(value);
+// *******************************************
+// reverse a string
+// *******************************************
+function reverse(str) {
+  if (!str || str.length < 2) {
+    return 'nothing to reverse';
+  }
 
-console.log(array1);
-array1.add(1, "!");
-console.log(array1);
+  var reversedStr = [];
+  for (let i = str.length - 1; i >= 0; i--) {
+    reversedStr.push(str[i]);
+  }
 
-array1.remove(1);
-console.log(array1);
+  return reversedStr.join('');
+}
+
+let value = reverse("hello world");
+console.log(value);
