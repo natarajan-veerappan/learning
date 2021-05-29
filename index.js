@@ -1,8 +1,11 @@
 const array = require('./array.js');
-array();
+//array();
 
 const string = require('./string.js');
 //string();
 
 const hashtable = require('./hashtable.js');
 //hashtable();
+
+const linkedlist = require('./linkedlist.js');
+linkedlist();
