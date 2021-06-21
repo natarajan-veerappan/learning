@@ -20,4 +20,7 @@ const bst = require('./ds-binarysearchtree.js');
 //bst();
 
 const sort = require('./algo-sorting.js');
-sort();
+//sort();
+
+const search = require('./algo-searching.js');
+search();
