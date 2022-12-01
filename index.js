@@ -1,3 +1,6 @@
+const promise = require('./promise.js');
+promise();
+
 const array = require('./ds-array.js');
 //array();
 
@@ -23,4 +26,4 @@ const sort = require('./algo-sorting.js');
 //sort();
 
 const search = require('./algo-searching.js');
-search();
+//search();

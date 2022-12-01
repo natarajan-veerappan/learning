@@ -3,7 +3,7 @@ module.exports = () => {
   console.log('Triggering array.js')
 
   class Array {
-    
+
     constructor() {
       this.length = 0;
       this.data = {};
@@ -21,25 +21,25 @@ module.exports = () => {
       // Delete the last element from the array
       delete this.data[this.length - 1];
       this.length--;
-      return lastItem;  
+      return lastItem;
     }
 
     // Get the element from the given index - O(1)
-    get (index) {
+    get(index) {
       return this.data[index];
     }
 
     // Add an element to the specified index - first, middle, etc.
     // This should shift all the elements to move 1 position right - O(n)
     add(index, item) {
-      this.shiftElementsToRight(index); 
+      this.shiftElementsToRight(index);
       this.data[index] = item;
-      this.length++;  
+      this.length++;
     }
 
     shiftElementsToRight(index) {
-        for (let i = this.length; i > index ; i--) {
-          this.data[i] = this.data[i-1]; 
+      for (let i = this.length; i > index; i--) {
+        this.data[i] = this.data[i - 1];
       }
     }
 
@@ -52,8 +52,8 @@ module.exports = () => {
     }
 
     shiftElementsToLeft(index) {
-      for (let i = index; i < this.length - 1 ; i++) {
-          this.data[i] = this.data[i + 1]; 
+      for (let i = index; i < this.length - 1; i++) {
+        this.data[i] = this.data[i + 1];
       }
     }
   }
@@ -89,28 +89,28 @@ module.exports = () => {
     }
 
     const mergedArray = [];
-    let i = j = 0; 
+    let i = j = 0;
     let arr1Item = arr1[i];
     let arr2Item = arr2[j];
-  
-    while(arr1Item || arr2Item) {
-      if(!arr2Item || arr1Item < arr2Item) {
+
+    while (arr1Item || arr2Item) {
+      if (!arr2Item || arr1Item < arr2Item) {
         mergedArray.push(arr1Item);
         i++;
         arr1Item = arr1[i];
       } else {
         mergedArray.push(arr2Item);
-        j++;   
+        j++;
         arr2Item = arr2[j];
       }
     }
     return mergedArray;
   }
 
-  var array1 = [1,3,5,7];
-  var array2 = [2,4,6,8]
+  var array1 = [1, 3, 5, 7];
+  var array2 = [2, 4, 6, 8]
   var mergeResult = mergeSortedArray(array1, array2);
   console.log("\nMerged Array : ");
   console.log(mergeResult);
-  
+
 };
